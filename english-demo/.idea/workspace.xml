@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bdc4366-a858-4b4f-96c2-11a0ee0b4d36" name="变更" comment="" />
+    <list default="true" id="e09e7244-c235-4468-91ad-9769473ce4d8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -23,22 +24,32 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="2" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectId" id="2QgX2Qqh0HtdmCto1viHJmReH7x" />
+  <component name="ProjectId" id="2QmmpumgI7sBFUmXAjyRtrEbR6o" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/zjh_130/Desktop/english-demo",
-    "settings.editor.selected.configurable": "configurable.group.tools"
+    "last_opened_file_path": "E:/JAVA/english-demo/english-demo/english/src/main/resources/static/login/js",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JAVA\english-demo\english-demo\english\src\main\resources\static\login\js" />
+      <recent name="E:\JAVA\english-demo\english-demo\english\src\main\resources\static\login\css" />
+      <recent name="E:\JAVA\english-demo\english-demo\english\src\main\resources\templates\login" />
+      <recent name="E:\JAVA\english-demo\english-demo\english\src\main\resources\static\workspace\css" />
+      <recent name="E:\JAVA\english-demo\english-demo\english\src\main\resources\static\workspace\js" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="ExamApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="launcher.ExamApplication" />
@@ -59,15 +70,25 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="默认任务">
-      <changelist id="6bdc4366-a858-4b4f-96c2-11a0ee0b4d36" name="变更" comment="" />
-      <created>1685775990742</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e09e7244-c235-4468-91ad-9769473ce4d8" name="Changes" comment="" />
+      <created>1685967326242</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1685775990742</updated>
+      <updated>1685967326242</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
