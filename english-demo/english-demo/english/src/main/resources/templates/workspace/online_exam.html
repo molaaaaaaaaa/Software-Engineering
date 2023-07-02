@@ -5,15 +5,15 @@
     </div>
 
 <!-- 考试内容 -->
-<div id = "online_exam-dtl-info-div" th:classappend="${from != 'adminChgInfo'} ? 'hidden'">
+<div id = "online_exam-dtl-info-div">
     <div class="hidden">
         <form id="online_exam-headPhotoUploadForm" method="POST" enctype="multipart/form-data">
         </form>
 
-        <a id="online_exam-confirm-dtl-link" th:href="@{/Workspace/toConfirmExamApplyInfo.do}"></a>
+        <a id="online_exam-confirm-dtl-link"></a>
     </div>
 
-    <form id="online_exam-dtl-from" class="form-horizontal" method="post"  th:data-admin-save-online_exam-info-url="@{/admin/Workspace/saveExamApplyInfo.do}"  th:action="@{/Workspace/saveExamApplyInfo.do}">
+    <form id="online_exam-dtl-from" class="form-horizontal" method="post">
         <input name="id" type="hidden" th:value="${examApplyInfo?.id}">
         <div class="form-group">
             <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1 required" for="examId">级别</label>
@@ -24,107 +24,9 @@
                 </select>
             </div>
         </div>
-
-        <div class="form-group">
-            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1  required" for="examRegion">考点地区</label>
-            <div class="col-xs-8 col-sm-6">
-                <select class="form-control" id="exam-apply-examRegion" owl:selectOp owl:enumKey="'exam_place_region'" owl:require="'true'"  owl:defaultVal="${examApplyInfo?.examPlace?.region}">
-                    <option value="0">选项1</option>
-                    <option value="1">选项2</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1  required" for="examPlaceId">考点名称</label>
-            <div class="col-xs-8 col-sm-6">
-                <select class="form-control" id="exam-apply-examPlaceId" th:data-get-data-url="@{/Workspace/getExamPlaceByRegionId.do}" name="examPlace.id"  owl:selectOp owl:enumList="${examPlaceIdList}" owl:require="'true'"  owl:defaultVal="${examApplyInfo?.examPlace?.id}"  >
-                    <option value="0">选项1</option>
-                    <option value="1">选项2</option>
-                </select>
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1  required" for="name">姓名</label>
-            <div class="col-xs-8 col-sm-6">
-                <input class="form-control" type="text" required id="name" name="name"  th:value="${examApplyInfo?.name}" placeholder="" />
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1  required" for="nameSpell">拼音</label>
-            <div class="col-xs-8 col-sm-6">
-                <input class="form-control" type="text" required id="nameSpell" name="nameSpell"  th:value="${examApplyInfo?.nameSpell}"  placeholder="" />
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1  required" for="sex">性别</label>
-            <div class="col-xs-8 col-sm-6">
-                <div class="radio-inline">
-                    <label>
-                        <input type="radio" th:attr ="checked=${(examApplyInfo.sex == '1' or examApplyInfo.sex == null)?true:false}" name="sex" value="1">
-                        男
-                    </label>
-                </div>
-
-                <div class="radio-inline">
-                    <label>
-                        <input type="radio"  th:attr ="checked=${examApplyInfo.sex == '2'?true:false}"   name="sex"  value="2">
-                        女
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1 required" for="country">国籍</label>
-            <div class="col-xs-8 col-sm-6">
-                <select class="form-control" id="country"  name="country"  owl:selectOp owl:enumKey="'country_code'" owl:require="'true'"  owl:defaultVal="${examApplyInfo?.country}" >
-                    <option value="0">选项1</option>
-                    <option value="1">选项2</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1 required" for="identityType">证件类型</label>
-            <div class="col-xs-8 col-sm-6">
-                <select class="form-control" id="identityType"  name="identityType" owl:selectOp owl:enumKey="'identity_type'" owl:require="'true'"  owl:defaultVal="${examApplyInfo?.identityType}" >
-                    <option value="0">test1</option>
-                    <option value="1">test2</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1 required" for="identityNum">证件号码</label>
-            <div class="col-xs-8 col-sm-6">
-                <input class="form-control" type="text" required id="identityNum"  th:value="${examApplyInfo?.identityNum}"  name="identityNum" />
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1 required" for="birthday">出生日期</label>
-            <div class="col-xs-8 col-sm-6">
-                <input class="form-control" type="date" required id="birthday" name="birthday"   th:value="${#dates.format(examApplyInfo?.birthday, 'yyyy-MM-dd')}" />
-            </div>
-        </div>
-
-        <div th:if="${from == 'adminChgInfo'}" class="form-group">
-            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1" for="score">分数</label>
-            <div class="col-xs-8 col-sm-6">
-                <input class="form-control" type="number" id="score" name="examScore.score" th:value="${examApplyInfo?.examScore?.score}" />
-            </div>
-        </div>
-
-
         <div class="form-group text-center exam-apply-dtl-from-submitBtn-wrapper">
-            <button  th:if="${readonly == null or !readonly}"  id="exam-apply-dtl-from-submitBtn"  type="submit" class="btn btn-primary" data-loading-text="处理中..">提交</button>
+            <input id="online_exam-dtl-from-submitBtn" class="btn btn-primary btn-lg" type="button" value="提交"/>
 
-            <button  th:if="${from == 'adminChgInfo'}" id="exam-apply-dtl-from-returnBtn"   class="btn btn-primary" >返回</button>
         </div>
     </form>
 

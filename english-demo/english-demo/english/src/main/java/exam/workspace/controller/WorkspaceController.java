@@ -225,53 +225,7 @@ public class WorkspaceController {
     public List<ExamPlaceBean> getExamPlaceByRegionId(String regionId) {
 		return examService.findExamPlaceByRegionId(regionId);
 	}
-	
-	
-	
-	@RequestMapping("/uploadHeadPhoto.do")
-    @ResponseBody
-    /**
-     * 上传报名的照片
-     * @param file
-     * @param request
-     * @return
-     */
-    public Map<String, String> uploadHeadPhoto(@RequestParam("file") MultipartFile file, HttpServletRequest request) {
-		
-		Map<String, String> result = new HashMap<String, String>();
-		
-        if (file.isEmpty()) {
-        	result.put("errMsg", "上传失败，请选择文件");
-            return result;
-        }
-        
-        if (file.getSize() / 1024  > 1024){
-        	result.put("errMsg", "图片大小不能超过1MB");
-            return result;
-        }
-        
-        
-        //生成唯一文件名，防止被覆盖
-        String fileName = file.getOriginalFilename();
-        String suffixName = fileName.substring(fileName.lastIndexOf("."));
-        String newFileName = UUID.randomUUID() + suffixName;
-        try {
-        	//保存上传的照片到硬盘
-        	File dest = new File(userImagesPath + newFileName);
-        	file.transferTo(dest);
-        	
-        	String srcUrl = request.getContextPath() + "/userImages/" + newFileName;
-            result.put("url", srcUrl);
-            return result;
-        } catch (Exception e) {
-        	e.printStackTrace();
-        }
-        
-        result.put("errMsg", "上传失败");
-        return result;
-    }
-	
-	
+
 	
 	@RequestMapping("/saveExamApplyInfo.do")
     @ResponseBody
@@ -310,5 +264,5 @@ public class WorkspaceController {
 		model.addAttribute("examApplyInfo", examApplyInfo);
 		return "workspace/confirm_exam_apply_info";
 	}
-	
+
 }
