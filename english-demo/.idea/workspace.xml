@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e09e7244-c235-4468-91ad-9769473ce4d8" name="Changes" comment="" />
+    <list default="true" id="e09e7244-c235-4468-91ad-9769473ce4d8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../english-demo.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../english-demo.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/english-demo/english/src/main/resources/templates/workspace/online_exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/english-demo/english/src/main/resources/templates/workspace/online_exam.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +20,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -37,8 +44,9 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/JAVA/english-demo/english-demo/english/src/main/resources/static/login/js",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/17290/Desktop/english/Software-Engineering/english-demo",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
   <component name="RecentsManager">

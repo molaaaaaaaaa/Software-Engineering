@@ -19,14 +19,137 @@
             <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1 required" for="examId">级别</label>
             <div class="col-xs-8 col-sm-6">
                 <select class="form-control" id="examId"  name="examInfo.id"  owl:selectOp owl:enumList="${examList}" owl:require="'true'"  owl:defaultVal="${examApplyInfo?.examInfo?.id}" >
-                    <option value="0">选项1</option>
-                    <option value="1">选项2</option>
+                    <option value="0">四级</option>
+                    <option value="1">六级</option>
                 </select>
             </div>
         </div>
-        <div class="form-group text-center exam-apply-dtl-from-submitBtn-wrapper">
-            <input id="online_exam-dtl-from-submitBtn" class="btn btn-primary btn-lg" type="button" value="提交"/>
+        <div class="panel panel-primary  exam-apply-protocol-wrapper">
+            <div class="panel-body">
+                <p class="exam-apply-protocol-content">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMy name is Jenny. I have four good friends.
+                    I like hamburgers, but Ben doesn’t like them.
+                    I don’t like strawberries. Cara doesn’t like them, either(也). Cara and Amy like French fries,
+                    and they have them every day. But Dale doesn’t. Dale and Ben like vegetable salad, but Amy doesn’t.
+                    She likes fruit salad.<br>
+                    根据短文内容，判断句子正(T)、误(F)。<br>
+                    ( ) 1. Ben doesn’t like hamburgers.<br>
+                    ( ) 2. Cara and Amy don’t like French fries.<br>
+                    ( ) 3. Dale doesn’t like French fries.<br>
+                    ( ) 4. Dale and Ben like vegetable salad.<br>
+                    ( ) 5. Amy doesn’t like fruit salad.<br>
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1  required" for="choose1">1. </label>
+            <div class="col-xs-8 col-sm-6">
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="choose1" value="1">
+                        A.yes
+                    </label>
+                </div>
 
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="choose1"  value="0">
+                        B.No
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1  required" for="choose2">2. </label>
+            <div class="col-xs-8 col-sm-6">
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="choose2" value="0">
+                        A.yes
+                    </label>
+                </div>
+
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="choose2"  value="1">
+                        B.No
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1  required" for="choose3">3. </label>
+            <div class="col-xs-8 col-sm-6">
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="choose3" value="1">
+                        A.yes
+                    </label>
+                </div>
+
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="choose3"  value="0">
+                        B.No
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1  required" for="choose4">4. </label>
+            <div class="col-xs-8 col-sm-6">
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="choose4" value="1">
+                        A.yes
+                    </label>
+                </div>
+
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="choose4"  value="0">
+                        B.No
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-sm-2 col-sm-offset-1  required" for="choose5">5. </label>
+            <div class="col-xs-8 col-sm-6">
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="choose5" value="0">
+                        A.yes
+                    </label>
+                </div>
+
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="choose5" value="1">
+                        B.No
+                    </label>
+                </div>
+            </div>
+        </div>
+        <body>
+        <p id="output"></p>
+        </body>
+        <script type="text/javascript">
+         function getRadioValue(name)
+         {
+            var radios = document.getElementsByName(name);
+            for (var i= 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    return radioslil.value;
+                }
+                return null;
+            }
+        }
+        var score = getRadioValue(choose1)
+         document.getElementById('output').innerHTML = score;
+        </script>
+        <div class="form-group text-center exam-apply-dtl-from-submitBtn-wrapper">
+            <input id="online_exam-dtl-from-submitBtn" class="btn btn-primary btn-lg" type="button" value=提交>
         </div>
     </form>
 

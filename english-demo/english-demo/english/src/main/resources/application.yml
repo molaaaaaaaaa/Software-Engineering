@@ -6,30 +6,30 @@ spring:
     password: qb731007QD
     driver-class-name:  com.p6spy.engine.spy.P6SpyDriver
   servlet:
-     multipart:
-        max-file-size: 5MB
-       
+    multipart:
+      max-file-size: 5MB
+
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
-  
-  
 
-#   imagesPath and imagesFilePath should same
+
+
+#文件保存位置   imagesPath和imagesFilePath路径要保持一致
 user:
-   imagesPath: file:C:/Users/Qin/Desktop/图片位置/
-   imagesFilePath: C:/Users/Qin/Desktop/图片位置/
-  
-#import score
+  imagesPath: file:C:/Users/Qin/Desktop/图片位置/
+  imagesFilePath: C:/Users/Qin/Desktop/图片位置/
+
+#导入成绩模板文件
 exam:
-   importScoreTemplateFilePath: C:/Users/Qin/Desktop/
-   importScoreTemplateFileName: scoreImport.xlsx
-#security:
-#   basic:
-#      enabled: false
-  
-  
-  
+  importScoreTemplateFilePath: C:/Users/Qin/Desktop/
+  importScoreTemplateFileName: scoreImport.xlsx
+  #security:
+  #   basic:
+  #      enabled: false
+
+
+
 #server:
 #  servlet:
 #   context-path: /example  
